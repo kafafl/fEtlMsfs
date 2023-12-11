@@ -2,9 +2,11 @@ import logging
 import azure.functions as func
 import datetime
 
+from fxEtlMSFS import RunEtlMsfs
+
 app = func.FunctionApp()
 
-@app.schedule(schedule="*/60 * * * *", arg_name="myTimer", run_on_startup=True, use_monitor=False)
+@app.schedule(schedule="0 * * * * *", arg_name="myTimer", run_on_startup=True, use_monitor=False)
 
 def fxTest(myTimer: func.TimerRequest) -> None:
     
@@ -14,6 +16,7 @@ def fxTest(myTimer: func.TimerRequest) -> None:
 
     logging.info('Python timer trigger function executed.')
     
+    RunEtlMsfs()
     print(dtGetDate.strftime(r'%m/%d/%y %H:%M:%S') + ":  Confirmed debug cycle in python...")
 
 
