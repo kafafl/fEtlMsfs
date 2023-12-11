@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"azureAutomation.directory.basePath": "C:/Tech/fEtlMsfs/",
+		"debug.internalConsoleOptions": "neverOpen"
+	}
+}
