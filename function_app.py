@@ -6,7 +6,7 @@ from fxEtlMSFS import RunEtlMsfs
 
 app = func.FunctionApp()
 
-@app.schedule(schedule="0 * * * * *", arg_name="myTimer", run_on_startup=True, use_monitor=False)
+@app.schedule(schedule="*/20 * * * *", arg_name="myTimer", run_on_startup=True, use_monitor=False)
 
 def fxTest(myTimer: func.TimerRequest) -> None:
     
