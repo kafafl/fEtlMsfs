@@ -17,6 +17,6 @@ def fxTest(myTimer: func.TimerRequest) -> None:
     logging.info('Python timer trigger function executed.')
     
     RunEtlMsfs()
-    print(dtGetDate.strftime(r'%m/%d/%y %H:%M:%S') + ":  Confirmed debug cycle in python...")
+    
 
 
